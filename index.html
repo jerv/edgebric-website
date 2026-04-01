@@ -39,15 +39,10 @@
     h1{font-size:44px;font-weight:700;line-height:1.15;letter-spacing:-.025em;margin:0 0 20px}
     .sub{font-size:19px;color:#94a3b8;line-height:1.6;margin:0 0 32px;max-width:600px;margin-left:auto;margin-right:auto}
     .badge{
-      display:inline-block;font-size:13px;font-weight:600;
-      color:#f1f5f9;background:rgba(15,23,42,.7);
-      border:1px solid #1e293b;border-radius:100px;padding:8px 20px;
-      margin-bottom:40px;letter-spacing:.02em;
+      display:block;font-size:18px;font-weight:700;
+      color:#64748b;letter-spacing:.08em;text-transform:uppercase;
+      margin-bottom:32px;
     }
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px;text-align:left}
-    .feat{background:rgba(15,23,42,.5);border:1px solid #1e293b;border-radius:10px;padding:24px}
-    .feat h3{font-size:15px;font-weight:600;color:#f1f5f9;margin-bottom:6px}
-    .feat p{font-size:14px;color:#64748b;line-height:1.5}
     .integrations{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:48px}
     .int-group{display:inline-flex;align-items:center;gap:8px}
     .int-label{font-size:11px;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
@@ -62,7 +57,6 @@
       .sub{font-size:17px}
       .brand img{width:40px;height:40px}
       .brand span{font-size:32px}
-      .features{grid-template-columns:1fr}
       .integrations{flex-direction:column;gap:12px}
     }
   </style>
@@ -78,33 +72,6 @@
     <div class="badge">Coming Soon</div>
     <h1>Private AI that understands your data.</h1>
     <p class="sub">AI that runs on your own hardware&mdash;a laptop, a desktop, or a dedicated machine for your team. No cloud, no third parties, no data leaving your network.</p>
-
-    <div class="features">
-      <div class="feat">
-        <h3>Your data never leaves</h3>
-        <p>Everything runs locally on your hardware. No cloud, no internet required. Works completely offline.</p>
-      </div>
-      <div class="feat">
-        <h3>Every answer cites its source</h3>
-        <p>See which file and page an answer came from. Verify before you act on it.</p>
-      </div>
-      <div class="feat">
-        <h3>Runs on consumer hardware</h3>
-        <p>No GPU, no server rack. Runs on the Mac you already own. Designed for Apple silicon.</p>
-      </div>
-      <div class="feat">
-        <h3>Team access via browser</h3>
-        <p>Install once. Everyone else connects through their browser. No software to deploy.</p>
-      </div>
-      <div class="feat">
-        <h3>Mesh networking</h3>
-        <p>Multiple offices? Each keeps its data local. Edgebric connects them into one searchable network.</p>
-      </div>
-      <div class="feat">
-        <h3>Source-available</h3>
-        <p>Every line of code is public on GitHub. Inspect exactly what the software does.</p>
-      </div>
-    </div>
 
     <div class="integrations">
       <div class="int-group">
@@ -131,7 +98,6 @@
     </div>
 
     <div class="links">
-      <a href="https://github.com/jerv/edgebric-website">GitHub</a>
       <a href="mailto:support@edgebric.com">support@edgebric.com</a>
     </div>
   </div>
