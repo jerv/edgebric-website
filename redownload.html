@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re-download — Edgebric</title>
+  <link rel="icon" type="image/svg+xml" href="assets/circle-logo-black.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:title" content="Re-download Edgebric">
+  <meta property="og:description" content="Enter your email to get your Edgebric download link again.">
+  <meta property="og:image" content="https://edgebric.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .redl-page{min-height:100vh;display:flex;align-items:center;justify-content:center}
+    .redl-box{max-width:440px;width:100%;text-align:center}
+    .redl-box h1{font-size:28px;font-weight:700;margin-bottom:12px}
+    .redl-box p{font-size:16px;color:#94a3b8;margin-bottom:28px;line-height:1.6}
+    .redl{display:flex;gap:8px;justify-content:center}
+    .redl input{
+      font-family:inherit;width:260px;padding:10px 16px;
+      border:1.5px solid #1e293b;border-radius:8px;font-size:15px;
+      background:#0f172a;color:#f1f5f9;
+    }
+    .redl input:focus{outline:none;border-color:#64748b}
+    .redl input::placeholder{color:#475569}
+    .redl button{
+      font-family:inherit;padding:10px 20px;border:none;border-radius:8px;
+      background:#f1f5f9;color:#0f172a;font-size:15px;font-weight:600;cursor:pointer;
+    }
+    .redl button:hover{background:#fff}
+    .redl-result{margin-top:16px;font-size:15px}
+    .back-link{margin-top:32px;font-size:14px}
+    @media(max-width:768px){
+      .redl{flex-direction:column}
+      .redl input{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="redl-page">
+    <div class="redl-box">
+      <h1>Re-download Edgebric</h1>
+      <p>Enter the email you used to purchase and we&rsquo;ll send your download link again.</p>
+      <div class="redl">
+        <input type="email" id="redownload-email" placeholder="you@example.com">
+        <button onclick="lookupPurchase()">Get Download</button>
+      </div>
+      <div id="redownload-result" class="redl-result"></div>
+      <p class="back-link"><a href="index.html">&larr; Back to Edgebric</a></p>
+    </div>
+  </div>
+  <script>
+    // Re-download lookup — TODO: wire up to Cloudflare Worker
+    function lookupPurchase() {
+      var email = document.getElementById('redownload-email').value.trim();
+      var result = document.getElementById('redownload-result');
+      if (!email || !email.includes('@')) {
+        result.textContent = 'Please enter a valid email address.';
+        result.style.color = '#ef4444';
+        return;
+      }
+      result.textContent = 'Re-download lookup coming soon.';
+      result.style.color = '#64748b';
+    }
+  </script>
+</body>
+</html>
