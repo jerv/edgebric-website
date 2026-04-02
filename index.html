@@ -162,7 +162,11 @@
     <p class="sub">From your kitchen table to a 200-person team. Real stories, real workflows.</p>
     <div class="uc-showcase">
       <div class="uc-nav">
-        <button class="uc-nav-btn active" data-story="home">
+        <button class="uc-nav-btn active" data-story="consultant">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Solo Professional
+        </button>
+        <button class="uc-nav-btn" data-story="home">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Personal &amp; Home
         </button>
@@ -182,10 +186,6 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           Multi-Office Mesh
         </button>
-        <button class="uc-nav-btn" data-story="consultant">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Solo Professional
-        </button>
       </div>
       <div class="uc-content">
 
@@ -201,7 +201,7 @@
           <p class="uc-more"><a href="use-cases/teams.html">See more team use cases &rarr;</a></p>
         </div>
 
-        <div class="uc-story active" id="story-home">
+        <div class="uc-story" id="story-home">
           <h3>Family command center</h3>
           <p class="uc-persona">Scenario: Parent managing household data on their personal computer</p>
           <div class="uc-story-body">
@@ -249,7 +249,7 @@
           <p class="uc-more"><a href="use-cases/multi-office.html">See more multi-office use cases &rarr;</a></p>
         </div>
 
-        <div class="uc-story" id="story-consultant">
+        <div class="uc-story active" id="story-consultant">
           <h3>A decade of client work, searchable</h3>
           <p class="uc-persona">Scenario: Independent consultant with 10 years of files</p>
           <div class="uc-story-body">
@@ -325,24 +325,28 @@
 <section class="dark" id="architecture">
   <div class="wrap">
     <p class="label">Architecture</p>
-    <h2>Scales from one person to an entire organization</h2>
-    <p class="sub muted">Three deployment modes. Same app. Pick what fits you now&mdash;upgrade later without migrating anything.</p>
+    <h2>Scales from one person to an entire team</h2>
+    <p class="sub muted">Three modes. Same app. Start with what fits you now&mdash;grow later without migrating anything.</p>
     <div class="arch-tabs mt2">
-      <button class="arch-tab active" data-arch="solo">Solo Mode</button>
-      <button class="arch-tab" data-arch="single">Single Node</button>
-      <button class="arch-tab" data-arch="mesh">Mesh Network</button>
+      <button class="arch-tab active" data-arch="solo">Solo Mode<small>Just you, on your computer</small></button>
+      <button class="arch-tab" data-arch="single">Shared Mode<small>One machine, everyone connects</small></button>
+      <button class="arch-tab" data-arch="mesh">Mesh Network<small>Multiple locations, linked together</small></button>
     </div>
 
     <div class="arch-panel active" id="arch-solo">
       <div class="mesh-text">
-        <p><strong>Just you and your data.</strong> No account, no login, no server. Edgebric runs on your computer as a personal AI assistant.</p>
+        <p><strong>Just you and your data.</strong> No account, no login, no network. Edgebric runs on your computer as a personal AI assistant.</p>
         <p>Upload your files&mdash;tax returns, medical records, research, recipes&mdash;and start asking questions. Everything stays on your machine. Nothing is ever sent anywhere.</p>
         <p>Solo mode is completely free. No sign-up, no internet required after the initial download. If you can install an app, you can use Edgebric.</p>
       </div>
       <div class="arch-diagram">
-        <div class="arch-solo">
-          <div class="arch-device primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline;vertical-align:middle;margin-right:6px"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v11H4V5z"/><path d="M1 16h22v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1z"/></svg>
+        <div class="arch-brand">
+          <img src="assets/circle-logo-white.svg" alt="" width="24" height="24">
+          <span>Edgebric</span>
+        </div>
+        <div class="arch-layout">
+          <div class="arch-device primary glow">
+            <svg width="22" height="22" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.2" style="display:inline;vertical-align:middle;margin-right:6px"><rect x="2" y="1" width="20" height="13" rx="2"/><path d="M0 16h24" stroke-linecap="round"/></svg>
             Your Mac
             <small>Edgebric + AI + your data</small>
           </div>
@@ -353,34 +357,38 @@
 
     <div class="arch-panel" id="arch-single">
       <div class="mesh-text">
-        <p><strong>One machine serves your whole team.</strong> Install Edgebric on a dedicated desktop and everyone else connects through their web browser. No software to install on their computers.</p>
-        <p>Admins upload and manage data sources. Team members sign in with their existing Google or Microsoft account. Role-based access controls who sees what.</p>
-        <p>A compact desktop starting under $500 can serve your entire office. One machine, one install, private AI for everyone on your network.</p>
+        <p><strong>One machine, everyone connects.</strong> Install Edgebric on a dedicated Mac and everyone else uses it through their web browser&mdash;on any device, any operating system. Nothing to install on their end.</p>
+        <p>You control what data is available and who can access it. People sign in with their existing Google or Microsoft account. Simple as sharing a link on your network.</p>
+        <p>Whether it&rsquo;s a family sharing a home computer, a small team in an office, or a group of collaborators&mdash;one install serves everyone.</p>
       </div>
       <div class="arch-diagram">
-        <div class="arch-solo">
-          <div class="arch-device primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:inline;vertical-align:middle;margin-right:6px"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="12" cy="12" r="1.5"/></svg>
-            Office Server
-            <small>Edgebric + AI + company data</small>
+        <div class="arch-brand">
+          <img src="assets/circle-logo-white.svg" alt="" width="24" height="24">
+          <span>Edgebric</span>
+        </div>
+        <div class="arch-layout">
+          <div class="arch-device primary glow">
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" style="display:inline;vertical-align:middle;margin-right:6px"><rect x="2" y="2" width="16" height="12" rx="2"/><line x1="6" y1="18" x2="14" y2="18"/><line x1="10" y1="14" x2="10" y2="18"/></svg>
+            Edgebric Host
+            <small>AI + data + serves the app</small>
           </div>
-          <div class="arch-arrow">&darr;</div>
+          <div class="arch-conn"></div>
           <div class="arch-browsers">
             <div class="arch-browser">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:block;margin:0 auto 4px"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Employee 1
+              <svg width="16" height="16" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="1" width="20" height="13" rx="2"/><path d="M0 16h24" stroke-linecap="round"/></svg>
+              Person 1
             </div>
             <div class="arch-browser">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:block;margin:0 auto 4px"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Employee 2
+              <svg width="16" height="16" viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="1" width="14" height="20" rx="3"/><line x1="6" y1="18" x2="10" y2="18"/></svg>
+              Person 2
             </div>
             <div class="arch-browser">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="display:block;margin:0 auto 4px"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Employee 3
+              <svg width="16" height="16" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="1" width="20" height="13" rx="2"/><path d="M0 16h24" stroke-linecap="round"/></svg>
+              Person 3
             </div>
           </div>
         </div>
-        <p class="arch-cap">One install. Team connects via browser. SSO login.</p>
+        <p class="arch-cap">One install. Others connect via browser on any device.</p>
       </div>
     </div>
 
