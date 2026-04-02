@@ -239,11 +239,11 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .arch-pill{
   font-size:10px;font-weight:600;color:#94a3b8;
   background:rgba(51,65,85,.5);border:1px solid #334155;
-  border-radius:100px;padding:3px 10px;
+  border-radius:100px;padding:4px 10px;
   display:inline-flex;align-items:center;gap:4px;
   white-space:nowrap;line-height:1;
 }
-.arch-pill svg{flex-shrink:0;vertical-align:middle}
+.arch-pill svg{flex-shrink:0;display:inline-block;vertical-align:-1px}
 .arch-device.primary{border-color:#475569;box-shadow:0 0 20px rgba(100,116,139,.15)}
 /* solo glow animation */
 .arch-device.glow{animation:arch-glow 3s ease-in-out infinite}
