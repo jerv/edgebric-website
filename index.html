@@ -483,21 +483,27 @@
 <section class="dark tc" id="pricing">
   <div class="wrap">
     <p class="label">Get Edgebric</p>
-    <h2>Download Edgebric &mdash; free and open source</h2>
-    <p class="sub muted center-sub">Edgebric is free to download, use, and modify. Licensed under <a href="https://github.com/edgebric/edgebric">AGPL 3.0</a>. If you find it useful, consider supporting development with a donation.</p>
-    <a href="https://github.com/edgebric/edgebric/releases" class="btn mt2">Download from GitHub</a>
-    <p class="note mt2">Support the project</p>
-    <div class="prices mt1">
-      <button class="pbtn" onclick="checkout(0)">$0<small>free</small></button>
-      <button class="pbtn" onclick="checkout(3000)">$30</button>
-      <button class="pbtn active" onclick="checkout(5000)">$50<small>recommended</small></button>
-      <button class="pbtn" onclick="checkout(10000)">$100</button>
+    <h2>Download Edgebric</h2>
+    <p class="sub muted center-sub">Edgebric is free and open source. It was built by a solo developer&mdash;if it&rsquo;s useful to you, a donation of any size helps keep development going.</p>
+    <div class="dl-box mt2">
+      <div class="dl-suggested">
+        <button class="dl-sug" onclick="setAmount(0)">$0</button>
+        <button class="dl-sug active" onclick="setAmount(5)">$5</button>
+        <button class="dl-sug" onclick="setAmount(25)">$25</button>
+        <button class="dl-sug" onclick="setAmount(50)">$50</button>
+      </div>
+      <div class="dl-input-row">
+        <div class="dl-input-wrap">
+          <input type="number" id="dl-amount" class="dl-input" min="0" value="5" placeholder="0">
+        </div>
+        <button class="dl-btn" onclick="handleDownload()">Download</button>
+      </div>
+      <p class="dl-note">Enter $0 for a free download. Any amount above $0 goes directly to supporting the developer. Thank you.</p>
     </div>
-    <div class="pcustom mt1">
-      <input type="number" id="custom-amount" min="0" placeholder="$ other">
-      <button onclick="checkoutCustom()">Donate</button>
+    <div class="dl-links mt2">
+      <a href="https://github.com/edgebric/edgebric/releases">Download from GitHub</a>
+      <a href="https://github.com/sponsors/jerv">Sponsor on GitHub</a>
     </div>
-    <p class="note-sm mt1">Donations help fund development. Edgebric is always free regardless.</p>
   </div>
 </section>
 

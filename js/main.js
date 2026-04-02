@@ -43,19 +43,36 @@ document.querySelectorAll('.faq-q').forEach(function(btn) {
   });
 });
 
-// Donation checkout — TODO: wire up Stripe
-function checkout(amountInCents) {
-  if (amountInCents === 0) {
-    window.location.href = 'https://github.com/edgebric/edgebric/releases';
-    return;
-  }
-  alert('Donation integration coming soon. Thank you for wanting to support Edgebric!');
+// Download / Donate
+function setAmount(val) {
+  document.getElementById('dl-amount').value = val;
+  document.querySelectorAll('.dl-sug').forEach(function(b) { b.classList.remove('active'); });
+  // highlight the clicked one
+  document.querySelectorAll('.dl-sug').forEach(function(b) {
+    if (b.textContent.trim() === '$' + val) b.classList.add('active');
+  });
 }
 
-function checkoutCustom() {
-  var input = document.getElementById('custom-amount');
+function handleDownload() {
+  var input = document.getElementById('dl-amount');
   var amount = parseInt(input.value, 10);
   if (isNaN(amount) || amount < 0) { input.style.borderColor = '#ef4444'; return; }
   input.style.borderColor = '';
-  checkout(amount * 100);
+  if (amount === 0) {
+    window.location.href = 'https://github.com/edgebric/edgebric/releases';
+    return;
+  }
+  // TODO: redirect to Stripe Checkout with amount
+  alert('Donation checkout coming soon — $' + amount + '. Thank you for supporting Edgebric!');
 }
+
+// Sync suggested buttons with manual input
+(function() {
+  var input = document.getElementById('dl-amount');
+  if (!input) return;
+  input.addEventListener('input', function() {
+    document.querySelectorAll('.dl-sug').forEach(function(b) {
+      b.classList.toggle('active', b.textContent.trim() === '$' + input.value);
+    });
+  });
+})();
