@@ -43,15 +43,19 @@ document.querySelectorAll('.faq-q').forEach(function(btn) {
   });
 });
 
-// Stripe Checkout — TODO: wire up
+// Donation checkout — TODO: wire up Stripe
 function checkout(amountInCents) {
-  alert('Stripe integration coming soon.');
+  if (amountInCents === 0) {
+    window.location.href = 'https://github.com/edgebric/edgebric/releases';
+    return;
+  }
+  alert('Donation integration coming soon. Thank you for wanting to support Edgebric!');
 }
 
 function checkoutCustom() {
   var input = document.getElementById('custom-amount');
   var amount = parseInt(input.value, 10);
-  if (!amount || amount < 5) { input.style.borderColor = '#ef4444'; return; }
+  if (isNaN(amount) || amount < 0) { input.style.borderColor = '#ef4444'; return; }
   input.style.borderColor = '';
   checkout(amount * 100);
 }
