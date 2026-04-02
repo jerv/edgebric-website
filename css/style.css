@@ -262,10 +262,10 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
   padding:10px 14px 8px;font-size:11px;color:#94a3b8;text-align:center;
   min-width:80px;
 }
-.arch-browser svg{display:block;margin:0 auto 4px}
+.arch-browser>svg{display:block;margin:0 auto 4px}
 .arch-browser .arch-pills{margin-top:6px}
 .arch-browser .arch-pill{font-size:9px;padding:3px 8px}
-.arch-browser .arch-pill svg{width:9px;height:9px;vertical-align:-2px}
+.arch-browser .arch-pill svg{width:9px!important;height:9px!important;display:inline!important;margin:0!important;vertical-align:-2px}
 .arch-browser-label{font-weight:600;color:#f1f5f9;font-size:12px;margin-bottom:2px}
 .arch-browser-sub{font-size:10px;color:#475569}
 .arch-cap{font-size:13px;color:#64748b;margin-top:12px;text-align:center}
