@@ -326,13 +326,8 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .hw-note strong{color:#0f172a}
 
 /* === DOWNLOAD / DONATE === */
-.dl-box{
-  max-width:400px;margin:0 auto;
-  background:#0f172a;border:1px solid #1e293b;border-radius:14px;
-  padding:28px 32px;
-}
-.dl-input-row{display:flex;gap:10px}
-.dl-input-wrap{position:relative;flex:1}
+.dl-row{display:flex;gap:10px;justify-content:center;max-width:400px;margin-left:auto;margin-right:auto}
+.dl-input-wrap{position:relative;width:120px}
 .dl-input-wrap::before{
   content:'$';position:absolute;left:14px;top:50%;transform:translateY(-50%);
   font-size:18px;font-weight:600;color:#64748b;pointer-events:none;
@@ -350,7 +345,7 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
   white-space:nowrap;transition:background .15s;
 }
 .dl-btn:hover{background:#fff}
-.dl-note{font-size:13px;color:#475569;margin-top:14px;line-height:1.5}
+.dl-note{font-size:13px;color:#475569;margin-top:16px;line-height:1.5}
 .dl-links{display:flex;gap:20px;justify-content:center;margin-top:20px;font-size:13px}
 .dl-links a{color:#475569}
 .dl-links a:hover{color:#94a3b8}
