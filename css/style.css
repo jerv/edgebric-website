@@ -243,7 +243,7 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
   display:inline-flex;align-items:center;gap:4px;
   white-space:nowrap;line-height:1;
 }
-.arch-pill svg{flex-shrink:0;display:inline-block;vertical-align:-1px}
+.arch-pill svg{flex-shrink:0;display:inline-block!important;vertical-align:-1px;margin:0!important}
 .arch-device.primary{border-color:#475569;box-shadow:0 0 20px rgba(100,116,139,.15)}
 /* solo glow animation */
 .arch-device.glow{animation:arch-glow 3s ease-in-out infinite}
