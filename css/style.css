@@ -232,8 +232,18 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .arch-device{
   background:#0f172a;border:1.5px solid #334155;border-radius:12px;
   padding:20px 28px;text-align:center;font-weight:600;font-size:15px;color:#f1f5f9;
+  position:relative;
 }
 .arch-device small{display:block;font-weight:400;font-size:12px;color:#64748b;margin-top:4px}
+.arch-pills{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.arch-pill{
+  font-size:10px;font-weight:600;color:#94a3b8;
+  background:rgba(51,65,85,.5);border:1px solid #334155;
+  border-radius:100px;padding:3px 10px;
+  display:inline-flex;align-items:center;gap:4px;
+  white-space:nowrap;
+}
+.arch-pill svg{flex-shrink:0}
 .arch-device.primary{border-color:#475569;box-shadow:0 0 20px rgba(100,116,139,.15)}
 /* solo glow animation */
 .arch-device.glow{animation:arch-glow 3s ease-in-out infinite}
@@ -264,10 +274,12 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .mesh-viz{position:relative;width:100%;aspect-ratio:1;max-width:400px;margin:0 auto}
 .mesh-node{
   position:absolute;background:#0f172a;border:1.5px solid #334155;
-  border-radius:12px;padding:16px 20px;text-align:center;
-  font-weight:600;font-size:14px;color:#f1f5f9;z-index:2;
-  min-width:140px;
+  border-radius:12px;padding:14px 16px 10px;text-align:center;
+  font-weight:600;font-size:13px;color:#f1f5f9;z-index:2;
+  min-width:130px;
 }
+.mesh-node .arch-pills{margin-top:6px}
+.mesh-node .arch-pill{font-size:9px;padding:2px 7px}
 .mesh-node small{display:block;font-weight:400;font-size:12px;color:#64748b;margin-top:4px}
 .mesh-node.primary{border-color:#475569;box-shadow:0 0 20px rgba(100,116,139,.15)}
 .mesh-node--hq{top:0;left:50%;transform:translateX(-50%)}
