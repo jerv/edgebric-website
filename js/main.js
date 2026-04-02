@@ -44,15 +44,6 @@ document.querySelectorAll('.faq-q').forEach(function(btn) {
 });
 
 // Download / Donate
-function setAmount(val) {
-  document.getElementById('dl-amount').value = val;
-  document.querySelectorAll('.dl-sug').forEach(function(b) { b.classList.remove('active'); });
-  // highlight the clicked one
-  document.querySelectorAll('.dl-sug').forEach(function(b) {
-    if (b.textContent.trim() === '$' + val) b.classList.add('active');
-  });
-}
-
 function handleDownload() {
   var input = document.getElementById('dl-amount');
   var amount = parseInt(input.value, 10);
@@ -65,14 +56,3 @@ function handleDownload() {
   // TODO: redirect to Stripe Checkout with amount
   alert('Donation checkout coming soon — $' + amount + '. Thank you for supporting Edgebric!');
 }
-
-// Sync suggested buttons with manual input
-(function() {
-  var input = document.getElementById('dl-amount');
-  if (!input) return;
-  input.addEventListener('input', function() {
-    document.querySelectorAll('.dl-sug').forEach(function(b) {
-      b.classList.toggle('active', b.textContent.trim() === '$' + input.value);
-    });
-  });
-})();
