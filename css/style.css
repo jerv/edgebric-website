@@ -241,9 +241,9 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
   background:rgba(51,65,85,.5);border:1px solid #334155;
   border-radius:100px;padding:3px 10px;
   display:inline-flex;align-items:center;gap:4px;
-  white-space:nowrap;
+  white-space:nowrap;line-height:1;
 }
-.arch-pill svg{flex-shrink:0}
+.arch-pill svg{flex-shrink:0;vertical-align:middle}
 .arch-device.primary{border-color:#475569;box-shadow:0 0 20px rgba(100,116,139,.15)}
 /* solo glow animation */
 .arch-device.glow{animation:arch-glow 3s ease-in-out infinite}
@@ -269,14 +269,6 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .arch-browser-sub{font-size:10px;color:#475569}
 .arch-cap{font-size:13px;color:#64748b;margin-top:12px;text-align:center}
 
-/* mesh users row beneath each node */
-.mesh-users{display:flex;gap:6px;margin-top:6px;justify-content:center}
-.mesh-user{
-  background:rgba(15,23,42,.8);border:1px solid #1e293b;border-radius:6px;
-  padding:4px 8px 3px;font-size:9px;color:#64748b;text-align:center;
-}
-.mesh-user .arch-pills{margin-top:3px}
-.mesh-user .arch-pill{font-size:8px;padding:1px 5px;gap:3px}
 
 /* mesh right column */
 .mesh-right{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
@@ -285,7 +277,7 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .mesh-brand span{font-weight:700;font-size:16px;color:#f1f5f9}
 
 /* mesh viz */
-.mesh-viz{position:relative;width:100%;aspect-ratio:.85;max-width:440px;margin:0 auto}
+.mesh-viz{position:relative;width:100%;aspect-ratio:1;max-width:400px;margin:0 auto}
 .mesh-node{
   position:absolute;background:#0f172a;border:1.5px solid #334155;
   border-radius:12px;padding:14px 16px 10px;text-align:center;
@@ -297,8 +289,8 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .mesh-node small{display:block;font-weight:400;font-size:12px;color:#64748b;margin-top:4px}
 .mesh-node.primary{border-color:#475569;box-shadow:0 0 20px rgba(100,116,139,.15)}
 .mesh-node--hq{top:0;left:50%;transform:translateX(-50%)}
-.mesh-node--b{bottom:0;left:0}
-.mesh-node--c{bottom:0;right:0}
+.mesh-node--b{bottom:10%;left:0}
+.mesh-node--c{bottom:10%;right:0}
 .mesh-lines{position:absolute;inset:0;z-index:1}
 .mesh-lines line{stroke:#334155;stroke-width:1.5;stroke-dasharray:6 4}
 .mesh-lines line.pulse{animation:mesh-pulse 3s ease-in-out infinite}
