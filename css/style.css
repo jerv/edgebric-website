@@ -363,11 +363,43 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .faq-a{display:none;padding-bottom:20px;font-size:15px;color:#475569;line-height:1.7}
 .faq-i.open .faq-a{display:block}
 
+/* === INSTALL === */
+.install-alt{margin-top:32px;max-width:520px;margin-left:auto;margin-right:auto;text-align:left}
+.install-alt summary{
+  font-size:14px;font-weight:600;color:#94a3b8;cursor:pointer;
+  list-style:none;text-align:center;
+}
+.install-alt summary::-webkit-details-marker{display:none}
+.install-alt summary::before{content:'+ ';font-weight:400}
+.install-alt[open] summary::before{content:'\2212 '}
+.install-code{
+  margin-top:16px;background:#030712;border:1px solid #1e293b;border-radius:8px;
+  padding:16px 20px;font-family:'SF Mono',SFMono-Regular,Consolas,monospace;
+  font-size:13px;color:#94a3b8;line-height:1.7;overflow-x:auto;white-space:pre;
+}
+.install-code .comment{color:#475569}
+.install-label{font-size:12px;font-weight:600;color:#64748b;margin:16px 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.install-label:first-child{margin-top:0}
+
 /* === FOOTER === */
-footer{padding:48px 0!important}
-.foot-links{display:flex;justify-content:center;gap:32px;margin-bottom:16px;flex-wrap:wrap}
-.foot-links a{font-size:14px;color:#94a3b8}
-.foot-note{font-size:13px;color:#64748b}
+footer{padding:0!important}
+.foot-inner{
+  display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;
+  padding:64px 0 40px;text-align:left;
+}
+.foot-col h4{font-size:13px;font-weight:600;color:#f1f5f9;margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
+.foot-col a{display:block;font-size:14px;color:#64748b;margin-bottom:8px;text-decoration:none}
+.foot-col a:hover{color:#94a3b8}
+.foot-col p{font-size:13px;color:#475569;line-height:1.5}
+.foot-brand{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.foot-brand img{width:24px;height:24px;border-radius:5px}
+.foot-brand span{font-weight:700;font-size:16px;color:#f1f5f9}
+.foot-bottom{
+  border-top:1px solid #1e293b;padding:24px 0;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.foot-bottom p{font-size:12px;color:#475569}
+.foot-numbat{opacity:.06;width:80px;height:auto}
 
 /* === RESPONSIVE === */
 @media(max-width:768px){
@@ -416,5 +448,6 @@ footer{padding:48px 0!important}
   /* hardware */
   .hw-grid{grid-template-columns:1fr}
   /* footer */
-  .foot-links{gap:16px}
+  .foot-inner{grid-template-columns:1fr 1fr;gap:24px}
+  .foot-bottom{flex-direction:column;gap:12px;text-align:center}
 }
