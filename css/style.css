@@ -209,6 +209,22 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .mesh-text p:last-child{margin-bottom:0}
 .mesh-text strong{color:#f1f5f9}
 
+/* === AGENT SECTION === */
+.agent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px}
+.agent-card{
+  background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:28px;
+}
+.agent-card-ico{
+  width:40px;height:40px;border-radius:10px;
+  background:rgba(241,245,249,.08);display:flex;align-items:center;justify-content:center;
+  color:#94a3b8;margin-bottom:16px;
+}
+.agent-card h4{font-size:16px;font-weight:600;color:#f1f5f9;margin-bottom:6px}
+.agent-card p{font-size:14px;color:#64748b;line-height:1.6}
+.agent-compat{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px;flex-wrap:wrap}
+.agent-compat-item{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#64748b}
+.agent-compat-item strong{color:#94a3b8;font-weight:600}
+
 /* === ARCHITECTURE TABS (dark variant) === */
 .arch-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
 .arch-tab{
@@ -432,6 +448,8 @@ footer{padding:0!important}
   .uc-nav-btn svg{display:none}
   .uc-content{padding-left:0;padding-top:16px}
   .uc-story h3{font-size:19px}
+  /* agents */
+  .agent-grid{grid-template-columns:1fr}
   /* architecture */
   .arch-panel.active{grid-template-columns:1fr}
   .arch-tabs{justify-content:center}

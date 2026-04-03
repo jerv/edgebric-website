@@ -38,6 +38,7 @@
     <ul class="nav-links">
       <li><a href="#use-cases">Use Cases</a></li>
       <li><a href="#features">Features</a></li>
+      <li><a href="#agents">Agents</a></li>
       <li><a href="#architecture">Architecture</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#pricing" class="btn-sm">Get Edgebric</a></li>
@@ -54,7 +55,7 @@
         <span>Edgebric</span>
       </div>
       <h1>Private AI that understands your data.</h1>
-      <p class="hero-sub">AI that runs on your own hardware&mdash;a laptop, a desktop, or a dedicated machine for your team. No cloud, no third parties, no data leaving your network.</p>
+      <p class="hero-sub">AI that runs on your own hardware&mdash;a laptop, a desktop, or a dedicated machine for your team. No cloud, no third parties, no data leaving your network. Works with AI agents too.</p>
       <p class="hero-sub">Whether it&rsquo;s personal records, client files, or team knowledge&mdash;everything stays on hardware you control. Multiple locations? Each one keeps its data local&mdash;Edgebric connects them into one searchable network. Free and open source.</p>
       <div class="hero-integrations">
         <div class="hero-int-group">
@@ -65,10 +66,16 @@
           </div>
         </div>
         <div class="hero-int-group">
-          <span class="hero-int-label">Works with</span>
+          <span class="hero-int-label">Syncs with</span>
           <div class="hero-int-logos">
             <img src="assets/logos/google-drive.svg" alt="Google Drive" width="20" height="20">
             <img src="assets/logos/onedrive.svg" alt="OneDrive" width="20" height="20">
+          </div>
+        </div>
+        <div class="hero-int-group">
+          <span class="hero-int-label">Agent-compatible</span>
+          <div class="hero-int-logos">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
           </div>
         </div>
       </div>
@@ -273,7 +280,7 @@
       <div class="benefit">
         <div class="benefit-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h4>Your data never leaves your hardware</h4>
-        <p>Everything runs locally. No cloud, no third-party servers, no internet required after setup. Works completely offline.</p>
+        <p>Everything runs locally. No cloud, no third-party servers, no internet required after setup. Same privacy controls for humans and AI agents.</p>
       </div>
       <div class="benefit">
         <div class="benefit-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
@@ -315,12 +322,49 @@
         <h4>Free and open source</h4>
         <p>Licensed under AGPL 3.0. Every line of code is on GitHub. Use it, modify it, contribute to it. No mystery binaries, no vendor lock-in.</p>
       </div>
+      <div class="benefit">
+        <div class="benefit-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg></div>
+        <h4>AI agent-ready</h4>
+        <p>Agents search, upload, and manage your knowledge via a simple REST API. Same privacy controls whether a human or an agent is asking.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ─── Architecture (dark) ─────────────────────────────── -->
-<section class="dark" id="architecture">
+<!-- ─── Agent Section (dark) ───────────────────────────── -->
+<section class="dark tc" id="agents">
+  <div class="wrap">
+    <p class="label">Agent-compatible</p>
+    <h2>Give your AI agent a private knowledge base</h2>
+    <p class="sub muted center-sub">Your agent searches your data, uploads new files, and manages your knowledge&mdash;all through a simple API. Works with <a href="https://openclaw.ai/">OpenClaw</a>, Claude, and any AI agent that speaks HTTP.</p>
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-card-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h4>Search</h4>
+        <p>Your agent queries your private data and gets cited answers instantly. The <code>/search</code> endpoint returns raw chunks&mdash;your agent&rsquo;s smart model does the synthesis. No local LLM needed.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h4>Upload</h4>
+        <p>Your agent saves documents to your knowledge base autonomously. Research, notes, files&mdash;ingested and indexed automatically. Your data stays on your hardware.</p>
+      </div>
+      <div class="agent-card">
+        <div class="agent-card-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+        <h4>Manage</h4>
+        <p>Your agent creates sources, organizes data, and maintains your knowledge over time. Edgebric becomes your agent&rsquo;s long-term memory.</p>
+      </div>
+    </div>
+    <div class="agent-compat mt2">
+      <div class="agent-compat-item"><strong>OpenClaw</strong> <span>ClawHub Skill</span></div>
+      <div class="agent-compat-item"><strong>Claude</strong></div>
+      <div class="agent-compat-item"><strong>Any HTTP agent</strong> <span>REST API</span></div>
+    </div>
+    <a href="use-cases/agents.html" class="btn mt2" style="color:#0f172a">Learn more</a>
+  </div>
+</section>
+
+<!-- ─── Architecture (dark-alt) ───────────────────────── -->
+<section class="dark-alt" id="architecture">
   <div class="wrap">
     <p class="label">Architecture</p>
     <h2>Scales from one person to an entire team</h2>
@@ -529,6 +573,7 @@ pnpm dev</div>
       <div class="faq-i"><button class="faq-q">What file types does it support?</button><div class="faq-a">PDFs, Word documents (.docx), plain text files, Markdown, and spreadsheets.</div></div>
       <div class="faq-i"><button class="faq-q">Is this open source?</button><div class="faq-a">Yes. Edgebric is licensed under AGPL 3.0&mdash;a widely recognized open source license. Every line of code is on GitHub. You can use it, modify it, and contribute back. The AGPL ensures that if anyone builds a service on top of Edgebric, they have to share their changes too.</div></div>
       <div class="faq-i"><button class="faq-q">How accurate are the answers?</button><div class="faq-a">Edgebric&rsquo;s answers are grounded in your data. It always shows which file and page the answer came from, so you can verify before acting on it. Like any AI tool, it can sometimes be wrong&mdash;the citations are there so you can always check.</div></div>
+      <div class="faq-i"><button class="faq-q">Does Edgebric work with AI agents?</button><div class="faq-a">Yes. Edgebric has a REST API that any AI agent can use to search, upload, and manage your data. API keys are scoped with per-source access control, so you decide exactly what each agent can see. It works with OpenClaw (available as a ClawHub skill), Claude, and any agent that can make HTTP requests. Your data never leaves your hardware, whether a human or an agent is querying it.</div></div>
     </div>
   </div>
 </section>
