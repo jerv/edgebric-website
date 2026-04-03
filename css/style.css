@@ -166,13 +166,13 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .benefit p{font-size:14px;color:#475569;line-height:1.6}
 
 /* === USE-CASE SHOWCASE === */
-.uc-showcase{display:grid;grid-template-columns:240px 1fr;gap:0;margin-top:32px;min-height:420px}
+.uc-showcase{display:grid;grid-template-columns:200px 1fr;gap:0;margin-top:32px;min-height:420px}
 .uc-nav{display:flex;flex-direction:column;gap:4px;border-right:1px solid #e2e8f0;padding-right:24px}
 .uc-nav-btn{
   font-family:inherit;display:flex;align-items:center;gap:10px;
   padding:12px 16px;border:none;border-radius:8px;
-  background:transparent;color:#475569;font-size:15px;font-weight:500;
-  cursor:pointer;text-align:left;transition:all .15s;white-space:nowrap;
+  background:transparent;color:#475569;font-size:14px;font-weight:500;
+  cursor:pointer;text-align:left;transition:all .15s;
 }
 .uc-nav-btn:hover{background:#f1f5f9;color:#0f172a}
 .uc-nav-btn.active{background:#0f172a;color:#f1f5f9}
