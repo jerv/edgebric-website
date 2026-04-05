@@ -101,11 +101,14 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
   transition:background .15s;
 }
 .btn:hover{background:#fff;color:#0f172a;text-decoration:none}
+.btn.btn-outline{background:transparent;color:#f1f5f9;border:1.5px solid rgba(241,245,249,.4)}
+.btn.btn-outline:hover{background:rgba(241,245,249,.1);color:#fff}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
 
 /* === HERO === */
 .hero{padding:0!important;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;align-items:center}
-.hero-content{text-align:left;padding:120px 0 80px;padding-right:48px}
+.hero-grid{display:grid;grid-template-columns:1fr;min-height:100vh;align-items:center;max-width:720px}
+.hero-content{text-align:left;padding:120px 0 80px}
 .hero-logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px}
 .hero-logo img{width:44px;height:44px;border-radius:10px}
 .hero-logo span{font-size:36px;font-weight:700;letter-spacing:-.03em;color:#f1f5f9}
@@ -121,26 +124,6 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .hero-int-group{display:inline-flex;align-items:center;gap:8px}
 .hero-int-label{font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .hero-int-logos{display:inline-flex;align-items:center;gap:8px}
-.hero-visual{position:relative;align-self:stretch;overflow:hidden;margin-right:-24px;margin-right:calc(-1 * (100vw - 1100px) / 2 - 24px)}
-.hero-carousel{position:relative;width:100%;height:100%}
-.hero-slide{
-  position:absolute;top:0;left:0;
-  width:100%;height:100%;object-fit:cover;object-position:left center;
-  opacity:0;transition:opacity .8s ease;
-}
-.hero-slide.active{opacity:1}
-.hero-carousel::before{
-  content:'';position:absolute;top:0;left:0;bottom:0;width:120px;z-index:1;
-  background:linear-gradient(to right,#030712 0%,rgba(3,7,18,0) 100%);
-}
-.screenshot-ph{
-  position:absolute;top:0;left:0;
-  width:100%;height:100%;
-  background:linear-gradient(135deg,#0a101f 0%,#111827 50%,#1e293b 100%);
-  display:flex;align-items:center;justify-content:center;color:#475569;font-size:16px;
-}
-.screenshot-ph.hero-slide{display:flex}
-
 /* === GRID === */
 .grid{display:grid;gap:24px}
 .g2{grid-template-columns:repeat(2,1fr)}
@@ -385,11 +368,11 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .dl-input:focus{outline:none;border-color:#64748b}
 .dl-input::placeholder{color:#334155}
 .dl-btn{
-  font-family:inherit;padding:12px 28px;border:none;border-radius:8px;
+  display:inline-block;font-family:inherit;padding:12px 28px;border:none;border-radius:8px;
   background:#f1f5f9;color:#0f172a;font-size:16px;font-weight:600;cursor:pointer;
-  white-space:nowrap;transition:background .15s;
+  white-space:nowrap;transition:background .15s;text-decoration:none;
 }
-.dl-btn:hover{background:#fff}
+.dl-btn:hover{background:#fff;text-decoration:none;color:#0f172a}
 .dl-note{font-size:13px;color:#475569;margin-top:16px;line-height:1.5}
 .dl-links{display:flex;gap:20px;justify-content:center;margin-top:20px;font-size:13px}
 .dl-links a{color:#475569}
@@ -460,16 +443,8 @@ footer{padding:0!important}
   .mt2{margin-top:28px}
 
   /* hero */
-  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-grid{min-height:auto;max-width:none}
   .hero-content{text-align:center;padding:88px 0 24px;padding-right:0}
-  .hero-visual{
-    position:relative;height:auto;border-radius:12px;overflow:hidden;
-    margin:16px 16px 0!important;border:1px solid #1e293b;
-  }
-  .hero-carousel{position:relative;aspect-ratio:16/10}
-  .hero-carousel::before{display:none}
-  .hero-slide{object-position:center top;border-radius:12px}
-  .screenshot-ph{border-radius:12px;aspect-ratio:16/10;position:relative}
   .hero h1{font-size:26px}
   .hero-sub{font-size:15px;margin-bottom:16px}
   .hero-logo img{width:36px;height:36px}
@@ -479,7 +454,7 @@ footer{padding:0!important}
   .hero-int-label{font-size:9px}
   .hero-int-logos{gap:5px}
   .hero-int-logos img,.hero-int-logos svg{width:14px;height:14px}
-  .screenshot-ph{border-radius:12px;border-right:1px solid #1e293b}
+  .hero-ctas{justify-content:center}
   .btn{font-size:15px;padding:10px 28px}
 
   /* steps */
