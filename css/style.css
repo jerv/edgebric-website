@@ -174,7 +174,7 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .feat-item{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#334155;line-height:1.5}
 .feat-item svg{flex-shrink:0;margin-top:2px}
 .feat-item strong{color:#0f172a}
-.feat-item a{color:#3b82f6;text-decoration:none;font-weight:500}
+.feat-item a{color:#94a3b8;text-decoration:none;font-weight:500}
 .feat-item a:hover{text-decoration:underline}
 
 /* === FEATURES (benefit cards) === */
@@ -429,7 +429,7 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .split-section{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .split-block h3{font-size:22px;font-weight:700;color:#0f172a;margin-bottom:12px;line-height:1.3}
 .split-block p{font-size:15px;color:#475569;line-height:1.6;margin-bottom:16px}
-.split-link{font-size:14px;font-weight:600;color:#3b82f6;text-decoration:none}
+.split-link{font-size:14px;font-weight:600;color:#94a3b8;text-decoration:none}
 .split-link:hover{text-decoration:underline}
 
 /* === TOOLS PAGE === */
@@ -450,7 +450,7 @@ h2{font-size:34px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-b
 .tool-example{font-size:13px;color:#64748b;font-style:italic;padding:10px 14px;background:#f8fafc;border-radius:6px;border:1px solid #e2e8f0}
 .tool-card-dark .tool-example{background:#1e293b;border-color:#334155;color:#94a3b8}
 .tool-chain{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:12px}
-.tool-chain-step{font-size:12px;font-weight:600;font-family:'SF Mono',SFMono-Regular,Consolas,monospace;color:#3b82f6;background:#1e293b;border:1px solid #334155;border-radius:6px;padding:4px 10px}
+.tool-chain-step{font-size:12px;font-weight:600;font-family:'SF Mono',SFMono-Regular,Consolas,monospace;color:#94a3b8;background:#1e293b;border:1px solid #334155;border-radius:6px;padding:4px 10px}
 .tool-chain-arrow{color:#475569;font-size:14px}
 .tool-privacy-note{display:flex;align-items:flex-start;gap:10px;padding:16px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}
 .tool-privacy-note svg{flex-shrink:0;margin-top:1px;color:#64748b}
