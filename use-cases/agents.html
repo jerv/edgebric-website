@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edgebric + AI Agents — Private Knowledge Base for Autonomous AI</title>
-  <meta name="description" content="Give your AI agent a private, local knowledge base. Search documents, upload files, manage sources — all via REST API. Works with OpenClaw, Claude, and any HTTP agent.">
+  <meta name="description" content="Give your AI agent a private, local knowledge base. Search documents, upload files, manage sources — all via REST API. Works with OpenClaw and any HTTP agent.">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
@@ -48,22 +48,8 @@
 </head>
 <body>
 
-<!-- ─── Nav ────────────────────────────────────────────── -->
-<nav id="nav">
-  <div class="wrap nav-inner">
-    <a href="../index.html" class="brand">
-      <img src="../assets/circle-logo-white.svg" alt="" width="28" height="28">
-      <span>Edgebric</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="../index.html#use-cases">Use Cases</a></li>
-      <li><a href="../index.html#features">Features</a></li>
-      <li><a href="../index.html#architecture">Architecture</a></li>
-      <li><a href="../index.html#faq">FAQ</a></li>
-      <li><a href="../index.html#pricing" class="btn-sm">Coming Soon</a></li>
-    </ul>
-  </div>
-</nav>
+<div id="site-header"></div>
+<script src="../js/components.js"></script>
 
 <!-- ─── Hero (dark) ────────────────────────────────────── -->
 <header class="dark" style="padding-top:120px;padding-bottom:88px">
@@ -129,7 +115,7 @@
       <div class="benefit">
         <div class="benefit-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg></div>
         <h4>No local LLM needed</h4>
-        <p>The <code>/search</code> endpoint skips the local model entirely. Your agent&rsquo;s smart model (Claude, GPT-4) does the reasoning. Edgebric just provides the knowledge.</p>
+        <p>The <code>/search</code> endpoint skips the local model entirely. Your agent&rsquo;s own model does the reasoning. Edgebric just provides the knowledge.</p>
       </div>
       <div class="benefit">
         <div class="benefit-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -197,7 +183,6 @@ curl -X POST -H <span class="str">"Authorization: Bearer eb_your_key"</span> \
     <h2>Works with your agent</h2>
     <div class="agent-compat mt2">
       <div class="agent-compat-item"><strong>OpenClaw</strong> <span>&mdash; ClawHub Skill</span></div>
-      <div class="agent-compat-item"><strong>Claude</strong> <span>&mdash; Anthropic agents</span></div>
       <div class="agent-compat-item"><strong>Any HTTP agent</strong> <span>&mdash; REST API + API key</span></div>
     </div>
     <p class="dl-note mt2">If it can make an HTTP request, it works with Edgebric. No SDK required.</p>
@@ -252,48 +237,11 @@ curl -X POST -H <span class="str">"Authorization: Bearer eb_your_key"</span> \
   <div class="wrap">
     <h2>Give your agent a knowledge base</h2>
     <p class="sub muted center-sub">Free, open source, runs on your hardware. Your agent, your data, your rules.</p>
-    <p style="font-size:14px;color:#475569;margin-top:20px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Coming Soon</p>
+    <a href="../index.html#pricing" class="btn mt2" style="color:#0f172a">Get Edgebric</a>
   </div>
 </section>
 
-<!-- ─── Footer ─────────────────────────────────────────── -->
-<footer class="dark-alt">
-  <div class="wrap">
-    <div class="foot-inner">
-      <div class="foot-col">
-        <div class="foot-brand">
-          <img src="../assets/circle-logo-white.svg" alt="" width="24" height="24">
-          <span>Edgebric</span>
-        </div>
-        <p>Private AI that runs on your hardware. Free and open source.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Use Cases</h4>
-        <a href="professionals.html">Solo Professionals</a>
-        <a href="personal.html">Personal &amp; Home</a>
-        <a href="teams.html">Teams</a>
-        <a href="legal.html">Legal &amp; Finance</a>
-        <a href="sales.html">Sales &amp; Product</a>
-        <a href="multi-office.html">Multi-Office</a>
-        <a href="agents.html">AI Agents</a>
-      </div>
-      <div class="foot-col">
-        <h4>Community</h4>
-        <a href="https://x.com/edgebric"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:4px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X / Twitter</a>
-      </div>
-      <div class="foot-col">
-        <h4>Legal</h4>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
-        <a href="mailto:support@edgebric.com">support@edgebric.com</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <p>AGPL 3.0 &mdash; Free and open source</p>
-      <img src="../assets/numbat-white.svg" alt="" class="foot-numbat">
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script src="../js/main.js"></script>
 </body>
