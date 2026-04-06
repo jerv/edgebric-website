@@ -50,7 +50,7 @@ function handleDownload() {
   if (isNaN(amount) || amount < 0) { input.style.borderColor = '#ef4444'; return; }
   input.style.borderColor = '';
   if (amount === 0) {
-    window.location.href = 'https://github.com/jerv/edgebric/releases/tag/v0.9.0';
+    window.location.href = 'https://github.com/jerv/edgebric/releases/latest';
     return;
   }
   // TODO: redirect to Stripe Checkout with amount
