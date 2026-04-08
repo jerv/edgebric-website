@@ -63,7 +63,7 @@
     <p class="big">All data processed by Edgebric&mdash;your documents, embeddings, conversations, search history, and user settings&mdash;is stored locally on your hardware. Edgebric does not operate cloud infrastructure. There is no &ldquo;Edgebric cloud.&rdquo; Your data never leaves your machine unless you explicitly choose to share it.</p>
 
     <h2 style="font-size:24px;margin-top:48px;margin-bottom:12px">5. Cloud Integrations</h2>
-    <p class="big">Edgebric can connect to third-party cloud services (Google Drive, OneDrive, Dropbox, etc.) at your direction. When you connect a cloud source:</p>
+    <p class="big">Edgebric can connect to third-party cloud services (Google Drive, OneDrive, Confluence, Notion) at your direction. When you connect a cloud source:</p>
     <ul style="margin-top:12px;padding-left:24px;list-style:disc">
       <li class="big" style="margin-bottom:8px">Documents are pulled <strong>to your local machine</strong> for processing</li>
       <li class="big" style="margin-bottom:8px">Edgebric does not store your documents on any external server</li>
@@ -74,7 +74,19 @@
 
     <h2 style="font-size:24px;margin-top:48px;margin-bottom:12px">6. Network Requests</h2>
     <p class="big">The only network request Edgebric makes without explicit user action is <strong>checking for software updates</strong> via the GitHub Releases API. This check sends a standard HTTP request to GitHub&rsquo;s public API and does not transmit any personal data, usage data, or device identifiers.</p>
-    <p class="big" style="margin-top:12px">All other network activity (cloud source syncing, web search via tools, etc.) happens only when you explicitly initiate it.</p>
+    <p class="big" style="margin-top:12px">User-initiated network activity includes:</p>
+    <ul style="margin-top:12px;padding-left:24px;list-style:disc">
+      <li class="big" style="margin-bottom:8px">Cloud source syncing (Google Drive, OneDrive, Confluence, Notion)</li>
+      <li class="big" style="margin-bottom:8px">Model downloads from HuggingFace</li>
+      <li class="big" style="margin-bottom:8px">Web search via DuckDuckGo (when using the search tool)</li>
+      <li class="big" style="margin-bottom:8px">URL reading (when using the read URL tool)</li>
+      <li class="big" style="margin-bottom:8px">OIDC/SSO authentication (Google, Microsoft) in multi-user mode</li>
+      <li class="big" style="margin-bottom:8px">Telegram bot integration (opt-in &mdash; see below)</li>
+    </ul>
+    <p class="big" style="margin-top:12px">See our <a href="https://docs.edgebric.com/admin/security.html" target="_blank">security documentation</a> for a complete transparency table of all network requests.</p>
+
+    <h2 style="font-size:24px;margin-top:48px;margin-bottom:12px">6a. Telegram Integration</h2>
+    <p class="big">Edgebric offers an optional Telegram bot integration. When enabled, messages you send to the bot transit Telegram&rsquo;s servers. Query text and answer snippets are transmitted through infrastructure outside your control. Vault mode data sources are automatically excluded from Telegram queries. This feature is entirely opt-in and disabled by default. For fully private operation, use the Edgebric app directly.</p>
 
     <h2 style="font-size:24px;margin-top:48px;margin-bottom:12px">7. AI Processing</h2>
     <p class="big">Edgebric runs AI models locally on your hardware using llama.cpp. Your documents and queries are processed on your machine. Nothing is sent to OpenAI, Anthropic, Google, or any other AI provider. Your data is never used to train any model.</p>
