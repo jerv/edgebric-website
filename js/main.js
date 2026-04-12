@@ -43,7 +43,7 @@ document.querySelectorAll('.faq-q').forEach(function(btn) {
   });
 });
 
-// Download / Donate
+// Download helper
 function handleDownload() {
   var input = document.getElementById('dl-amount');
   var amount = parseInt(input.value, 10);
@@ -53,8 +53,7 @@ function handleDownload() {
     window.location.href = 'https://github.com/jerv/edgebric/releases/latest';
     return;
   }
-  // TODO: redirect to Stripe Checkout with amount
-  alert('Donation checkout coming soon — $' + amount + '. Thank you for supporting Edgebric!');
+  window.location.href = 'https://github.com/jerv/edgebric/releases/latest';
 }
 
 // Dynamic note based on amount
@@ -63,11 +62,6 @@ function handleDownload() {
   var note = document.getElementById('dl-note');
   if (!input || !note) return;
   input.addEventListener('input', function() {
-    var val = parseInt(input.value, 10);
-    if (val === 0 || input.value === '0') {
-      note.textContent = 'Edgebric is built and maintained by a solo developer. If you find it useful, even a small donation helps keep it going.';
-    } else {
-      note.textContent = 'Thank you for supporting Edgebric.';
-    }
+    note.textContent = 'Download the latest release from GitHub.';
   });
 })();
